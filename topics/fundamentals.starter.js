@@ -38,3 +38,52 @@
 // 10. create an object `person` with properties `name`, `age` and `favoriteFoods`
 // use the array `foods` as the value for the `favoriteFoods` property
 // log the object to the console
+
+
+let myName = "Yelle";
+
+let birthYear = parseInt(prompt("Enter your birth year:"));
+
+let currentYear = new Date().getFullYear();
+let age = currentYear - birthYear;
+
+console.log("Your age is:", age);
+
+function greet(name) {
+    console.log(`Hi there, ${name}! Have a nice day!`);
+}
+
+greet(myName);
+
+function calculateAge(year) {
+    let currentYear = new Date().getFullYear();
+    let calculatedAge = currentYear - year;
+    console.log("Your age is:", calculatedAge);
+}
+
+calculateAge(birthYear);
+
+let feeling = prompt("How are you feeling today? (good, bad, ok)");
+switch (feeling.toLowerCase()) {
+    case "good":
+        console.log("😊");
+        break;
+    case "bad":
+        console.log("😞");
+        break;
+    case "ok":
+        console.log("😐");
+        break;
+    default:
+        console.log("🤔 (Invalid response)");
+}
+
+let foods = ["Pizza", "Sushi", "Burger"];
+foods.forEach(food => console.log(food));
+
+let person = {
+    name: myName,
+    age: age,
+    favoriteFoods: foods
+};
+console.log(person);
